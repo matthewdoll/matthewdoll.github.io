@@ -256,3 +256,103 @@ footer.site {
   padding: 4px 0 4px 12px;
   margin: 1.4em 0;
 }
+
+/* ---------------------------------------------------------------- */
+/* Molecule nav (home page) + cross-document view transitions        */
+/* Route A: SVG + native View Transitions. Swappable later for a     */
+/* real 3D renderer (Three.js / 3Dmol.js) without touching anything  */
+/* else — the <a href> links and .vt-* names are the only contract.  */
+/* ---------------------------------------------------------------- */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+}
+
+.vt-cv { view-transition-name: atom-cv; }
+.vt-projects { view-transition-name: atom-projects; }
+.vt-contact { view-transition-name: atom-contact; }
+
+::view-transition-new(atom-cv),
+::view-transition-new(atom-projects),
+::view-transition-new(atom-contact) {
+  animation: atom-pop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes atom-pop {
+  from { transform: scale(0.82); opacity: 0.5; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.molecule-hero {
+  margin: 12px 0 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.molecule-hero svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  overflow: visible;
+}
+
+.molecule-hero .bond {
+  stroke: var(--border);
+  stroke-width: 3;
+}
+
+.molecule-hero .bond-inner {
+  stroke: var(--border);
+  stroke-width: 1.4;
+}
+
+.molecule-hero .atom {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.molecule-hero a {
+  cursor: pointer;
+}
+
+.molecule-hero a:hover .atom,
+.molecule-hero a:focus-visible .atom {
+  transform: scale(1.14);
+  filter: drop-shadow(0 0 10px rgba(31, 92, 74, 0.55));
+}
+
+.molecule-hero a:focus-visible {
+  outline: none;
+}
+
+.molecule-hero a:focus-visible .atom-o {
+  filter: drop-shadow(0 0 0 3px var(--accent)) drop-shadow(0 0 10px rgba(31, 92, 74, 0.55));
+}
+
+.molecule-hero .label {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--text);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.molecule-hero a:hover .label,
+.molecule-hero a:focus-visible .label {
+  opacity: 1;
+}
+
+.molecule-caption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}

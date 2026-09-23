@@ -25,16 +25,74 @@
   <h1>Matthew Doll</h1>
   <p class="tagline">Chemistry (Oxford) → operations, data, and scientific computing side projects.</p>
 
+  <div class="molecule-hero">
+    <svg viewBox="0 50 600 400" role="img" aria-label="Pt(NO)3 molecule, used as navigation — click an atom to go to CV, Projects, or Contact">
+      <defs>
+        <radialGradient id="ptGrad" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#f6f6f6"/>
+          <stop offset="45%" stop-color="#cfcfcf"/>
+          <stop offset="100%" stop-color="#87878a"/>
+        </radialGradient>
+        <radialGradient id="nGrad" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#8ea3ff"/>
+          <stop offset="45%" stop-color="#3b5bdb"/>
+          <stop offset="100%" stop-color="#1c2f7a"/>
+        </radialGradient>
+        <radialGradient id="oGrad" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#ff9a86"/>
+          <stop offset="45%" stop-color="#e03131"/>
+          <stop offset="100%" stop-color="#8a1717"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Pt–N bonds (single) -->
+      <line class="bond" x1="300" y1="300" x2="300" y2="190"/>
+      <line class="bond" x1="300" y1="300" x2="395" y2="355"/>
+      <line class="bond" x1="300" y1="300" x2="205" y2="355"/>
+
+      <!-- N–O bonds (drawn as double lines) -->
+      <line class="bond-inner" x1="297" y1="178" x2="297" y2="127"/>
+      <line class="bond-inner" x1="303" y1="178" x2="303" y2="127"/>
+      <line class="bond-inner" x1="393.5" y1="357.6" x2="458.5" y2="395.6"/>
+      <line class="bond-inner" x1="396.5" y1="352.4" x2="461.5" y2="390.4"/>
+      <line class="bond-inner" x1="203.5" y1="352.4" x2="138.5" y2="390.4"/>
+      <line class="bond-inner" x1="206.5" y1="357.6" x2="141.5" y2="395.6"/>
+
+      <!-- Pt centre — home, not a link -->
+      <circle class="atom" cx="300" cy="300" r="34" fill="url(#ptGrad)"/>
+      <text x="300" y="305" text-anchor="middle" font-family="var(--sans)" font-size="14" font-weight="700" fill="#3a3a3a">Pt</text>
+
+      <!-- Branch: CV (top) -->
+      <a href="cv.html" class="vt-cv" aria-label="Go to CV">
+        <title>CV</title>
+        <circle class="atom" cx="300" cy="190" r="15" fill="url(#nGrad)"/>
+        <circle class="atom atom-o" cx="300" cy="115" r="13" fill="url(#oGrad)"/>
+        <text class="label" x="300" y="88" text-anchor="middle">CV</text>
+      </a>
+
+      <!-- Branch: Projects (lower right) -->
+      <a href="projects.html" class="vt-projects" aria-label="Go to Projects">
+        <title>Projects</title>
+        <circle class="atom" cx="395" cy="355" r="15" fill="url(#nGrad)"/>
+        <circle class="atom atom-o" cx="460" cy="393" r="13" fill="url(#oGrad)"/>
+        <text class="label" x="478" y="398" text-anchor="start">Projects</text>
+      </a>
+
+      <!-- Branch: Contact (lower left) -->
+      <a href="contact.html" class="vt-contact" aria-label="Go to Contact">
+        <title>Contact</title>
+        <circle class="atom" cx="205" cy="355" r="15" fill="url(#nGrad)"/>
+        <circle class="atom atom-o" cx="140" cy="393" r="13" fill="url(#oGrad)"/>
+        <text class="label" x="122" y="398" text-anchor="end">Contact</text>
+      </a>
+    </svg>
+  </div>
+  <p class="molecule-caption">Pt(NO)&#8323; — click an atom</p>
+
   <p class="lede">
     This site collects small tools and write-ups from projects I've built for fun —
-    mostly scientific computing scripts turned into interactive pages. Each one has
-    a short explanation of what it does and why, plus the code behind it. New ones
-    get added as I finish them — see <a href="projects.html">Projects</a>.
-  </p>
-
-  <h2>Elsewhere</h2>
-  <p class="lede">
-    <a href="cv.html">CV</a> · <a href="contact.html">Get in touch</a>
+    mostly scientific computing scripts turned into interactive pages. New ones get
+    added as I finish them.
   </p>
 </main>
 
