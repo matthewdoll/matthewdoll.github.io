@@ -1,0 +1,258 @@
+:root {
+  --bg: #fafaf8;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --accent: #1f5c4a;
+  --border: #e2e0da;
+  --mono: "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0 0;
+}
+
+header.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-bottom: 16px;
+}
+
+.site-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+nav.tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+nav.tabs a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav.tabs a:hover {
+  color: var(--text);
+  background: rgba(0,0,0,0.04);
+}
+
+nav.tabs a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+  background: rgba(31,92,74,0.09);
+}
+
+main {
+  padding: 40px 0 80px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.2em 0 0.6em;
+  padding-top: 0.6em;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+p { margin: 0.6em 0; }
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin-top: 0;
+}
+
+.lede {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+a { color: var(--accent); }
+
+code, pre {
+  font-family: var(--mono);
+  font-size: 0.88em;
+}
+
+pre {
+  background: #f1efe9;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.role {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.role-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+}
+
+ul.plain {
+  padding-left: 1.1em;
+  margin: 0.4em 0 1.1em;
+}
+
+ul.plain li { margin: 0.28em 0; }
+
+.entry { margin-bottom: 1.5em; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 1.2em;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  background: #fff;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.card.placeholder {
+  border-style: dashed;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  font-size: 0.92rem;
+}
+
+form.contact {
+  margin-top: 1em;
+  max-width: 480px;
+}
+
+form.contact label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 14px 0 4px;
+}
+
+form.contact input,
+form.contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+form.contact textarea { min-height: 120px; resize: vertical; }
+
+form.contact button {
+  margin-top: 18px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+form.contact button:hover { opacity: 0.92; }
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1em 0 2em;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.92rem;
+  background: #fff;
+}
+
+.contact-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 20px 0 40px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.cv-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-left: 3px solid var(--border);
+  padding: 4px 0 4px 12px;
+  margin: 1.4em 0;
+}

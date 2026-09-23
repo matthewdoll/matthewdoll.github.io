@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Matthew Doll</title>
+<meta name="description" content="Get in touch with Matthew Doll.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Matthew Doll</a>
+    <nav class="tabs">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Contact</h1>
+  <p class="lede">Send a message below, or find me on LinkedIn.</p>
+
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/matthew-r-doll" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+
+  <!--
+    Contact form — posts to Formspree, so no email address ever appears in this
+    page's source (nothing for an address-harvesting bot to pick up).
+
+    Setup (2 minutes, free):
+    1. Go to https://formspree.io and sign up with mattdollr@gmail.com
+    2. Create a new form — Formspree gives you an endpoint like
+       https://formspree.io/f/abcdwxyz
+    3. Replace YOUR_FORM_ID below with that ID.
+    4. Submissions land in your inbox; no backend needed.
+  -->
+  <form class="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your email</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+    <button type="submit">Send</button>
+    <p class="form-note">Goes straight to my inbox — I'll reply from there.</p>
+  </form>
+</main>
+
+<footer class="site">
+  <div class="wrap">&copy; <span id="year"></span> Matthew Doll</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

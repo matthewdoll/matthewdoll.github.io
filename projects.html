@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Matthew Doll</title>
+<meta name="description" content="Scientific computing projects and interactive tools by Matthew Doll.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Matthew Doll</a>
+    <nav class="tabs">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Projects</h1>
+  <p class="lede">
+    Small scientific computing tools, each with a write-up of the design decisions
+    and the code behind it. Added as I finish them.
+  </p>
+
+  <div class="card-grid">
+    <div class="card placeholder">Formula mass finder — coming soon</div>
+    <div class="card placeholder">Solubility baseline test — coming soon</div>
+  </div>
+
+  <!--
+    TEMPLATE — copy this block for each finished project, replace the placeholder
+    div above with one of these, and link "href" to a new project page.
+
+    <a class="card" href="projects/formula-mass-finder.html" style="text-decoration:none; display:block;">
+      <h3>Formula mass finder</h3>
+      <p>Type a chemical formula, get the molar mass and elemental breakdown.</p>
+    </a>
+  -->
+</main>
+
+<footer class="site">
+  <div class="wrap">&copy; <span id="year"></span> Matthew Doll</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
